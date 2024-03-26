@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/79a577f021.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="/images/icon.jpg">
+
+
+</head>
+
+<body>
+    <header>
+        <div class="user">
+            <img src="images/veerProfile.png" alt="">
+            <h3 class="name">Veer Pratap Singh</h3>
+            <p class="post">Student of Class 8 <sup>th</sup></p>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#portfolio">Subjects</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+
+            </ul>
+        </nav>
+
+    </header>
+
+    <div id="menu" class="fas fa-bars">
+
+
+    </div>
+    <section class="home" id="home">
+        <h3>HI THERE !</h3>
+        <h1>I'M <span>Veer Pratap Singh</span></h1>
+        <p id="headP">I am basically from Varanasi Uttar Pradesh
+            . Currently I am in Eighth class from Kensri school Bangalore.
+            Coming to family background,  My father is a business man and my mother is housewife
+            my uncle is software engineer and my aunt is housewife.
+        </p>
+           
+            <p>
+            I am also running a you tube channel named as "Techie World" where I will make vedios on technical stuff.
+            
+            </p>
+        <a href="#about"><button class="btn">About me <i class="fas fa-user"></i></button></a>
+
+    </section>
+    <section class="about" id="about">
+        <h1 class="heading"><span>about</span>me</h1>
+        <div class="row">
+            <div class="info">
+                <h3><span>name:</span>Veer singh</h3>
+                <h3><span>age:</span>13</h3>
+                <h3><span>Qualification:</span>7 <sup>th</sup>Pass</h3>
+                <h3><span>language:</span>Hindi,English</h3>
+                <h3><span>Hobbies:</span> My hobby is eating foods  outside and being active on social media.</h3>
+            </div>
+
+            <div class="counter">
+                <div class="box">
+                    <span>3+</span>
+                    <h3>Staying In Kensri</h3>
+                </div>
+
+                <div class="box">
+                    <span>100%</span>
+                    <h3>Attendive In Class</h3>
+                </div>
+                <div class="box">
+                    <span>3</span>
+                    <h3>Award Won</h3>
+                </div>
+
+            </div>
+        </div>
+        <h3></h3>
+
+    </section>
+    <section class="education" id="education">
+        <h1 class="heading"><span>My</span>Education</h1>
+        <div class="box-img">
+      <img src="images/veer.preasation.jpg" alt="">
+    </div>
+    </section>
+    <section class="portfolio" id="portfolio">
+        <h1 class="heading"><span>My</span>Subjects</h1>
+        <div class="container">
+            <div class="box">
+               <a class="blog" href="https://veer2009.blogspot.com/2024/01/science-blog.html" target="_blank"> <img src="images/01_nature.png" alt="" class="img1"></a>
+              <a class="blog" href=""> <img src="images/04_chemistry.png" alt="" class="img2"></a> 
+
+            </div>
+            <div class="box">
+                <a class="blog" href=""><img src="images/05_social.png" alt="" class="img4"></a> 
+                <a class="blog" href="">    <img src="images/06_mathematics.png" alt="" class="img5"></a> 
+
+            </div>
+            <div class="box">
+                <a class="blog" href="">       <img src="images/07C_kannada.png" alt="" class="img3"></a> 
+                <a class="blog" href="">  <img src="images/07b_hindi.png" alt="" class="img6"></a> 
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+
+        <h1 class="heading"> <span>contact</span> me </h1>
+
+        <div class="row">
+
+            <div class="content">
+
+                <h3 class="title">contact info</h3>
+
+                <div class="info">
+                    <h3> <i class="fas fa-envelope"></i> support@nextitexpert.com </h3>
+                    <h3> <i class="fas fa-phone"></i>8553476600 </h3>
+                    <h3> <i class="fas fa-phone"></i> 8840835232</h3>
+                    <h3> <i class="fas fa-map-marker-alt"></i> Dasarhalli,Hebbal,Bengluru, india - 400104. </h3>
+                </div>
+            </div>
+            <form onsubmit="sendEmail(); reset(); return false;">
+
+                <input  type="text" id="name" placeholder="name" class="box" required>
+                <input type="email" id="email" placeholder="email" class="box" required>
+                <input type="text" id="Phone No" placeholder="Phone No" class="box" required>
+                <textarea name="" id="msg" cols="30" rows="10" class="box message" placeholder="message" ></textarea>
+                <button onclick="sendEmail()" class="btn">send <i class="fas fa-paper-plane"></i></button>
+            </form>
+
+        </div>
+    </section>
+<a href="#home" class="top">
+    <img src="images/scroll-top-img.png" alt="">
+</a>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="index.js">
+
+    </script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            const input=document.getElementsByTagName("input").value
+            if (input===undefined) {
+               alert("invlid");
+            }else{
+            // var emailBody="Hi Veer <br> My Name"
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "itexperrt@support.com",
+                Password: "EB3F6865F595BD9ABDF46ED2066278ECE37A",
+                To: 'support@nextitexpert.com',
+                From: document.getElementById("email").value,
+                Subject: "itexperrt@support.com",
+                Body: "Name:" + document.getElementById("name").value
+                    + "<br> Email:" + document.getElementById("email").value
+                    + "<br> Phone No:" + document.getElementById("Phone No").value
+                    + "<br> Message:" + document.getElementById("msg").value
+
+                    // Body:"Name " + document.getElementById("name").value +
+                    // "<br> Message:" + document.getElementById("msg").value
+                    
+            }).then(
+                message => alert(" Message sent Succesfuly")
+            )
+
+        }
+    }
+//         const input=document.getElementsByTagName("input").value
+// if (input==null) {
+//     alert
+// }
+//             // var emailBody="Hi Veer <br> My Name"
+//             Email.send({
+//                 Host: "smtp.elasticemail.com",
+//                 Username: "itexperrt@support.com",
+//                 Password: "EB3F6865F595BD9ABDF46ED2066278ECE37A",
+//                 To: 'support@nextitexpert.com',
+//                 From: document.getElementById("email").value,
+//                 Subject: "itexperrt@support.com",
+//                 Body: "Name:" + document.getElementById("name").value
+//                     + "<br> Email:" + document.getElementById("email").value
+//                     + "<br> Phone No:" + document.getElementById("Phone No").value
+//                     + "<br> Message:" + document.getElementById("msg").value
+
+//                     // Body:"Name " + document.getElementById("name").value +
+//                     // "<br> Message:" + document.getElementById("msg").value
+                    
+//             }).then(
+//                 message => alert(" Message sent Succesfuly")
+//             )
+
+//         }
+    </script>
+</body>
+
+</html>
